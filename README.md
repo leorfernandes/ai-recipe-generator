@@ -20,7 +20,7 @@
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-app-url.vercel.app) _(Update with deployment URL)_
+[View Live Demo](https://flavorcraft-ai.vercel.app/)
 
 ## 📸 Screenshots
 
