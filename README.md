@@ -30,8 +30,22 @@
 
 ## 🚀 Live Demo
 
-**Frontend**: [View Live Demo](https://your-app-url.vercel.app) _(Update with your deployment URL)_  
-**Backend API**: Coming soon (Phase 3 deployment)
+[View Live Demo](https://flavorcraft-ai.vercel.app/)
+
+## 📸 Screenshots
+
+### Desktop
+![FlavorCraft AI Homepage on Desktop](./screenshots/homepage-desktop.png)
+![Recipe Generation on Desktop](./screenshots/recipe-form-desktop.png)
+![Generated Recipe on Desktop](./screenshots/recipe-result-desktop.png)
+
+### Desktop
+![FlavorCraft AI Homepage on Mobile](./screenshots/homepage-mobile.png)
+![Recipe Generation on Mobile](./screenshots/recipe-form-mobile.png)
+![Generated Recipe on Mobile](./screenshots/recipe-result-mobile.png)
+
+### Backend API 
+Coming soon (Phase 3 deployment)
 
 ## 🛠️ Tech Stack
 
