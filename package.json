@@ -1,7 +1,8 @@
 {
   "name": "smart-recipe-generator",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "AI-powered recipe generator with user authentication and recipe management",
   "type": "module",
   "scripts": {
     "dev": "vite",
