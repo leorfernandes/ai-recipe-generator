@@ -45,7 +45,7 @@
 ![Generated Recipe on Mobile](./screenshots/recipe-result-mobile.png)
 
 ### Backend API 
-Coming soon (Phase 3 deployment)
+[API Base URL](https://ai-recipe-generator-backend.onrender.com/) - Live backend deployed on Render
 
 ## 🛠️ Tech Stack
 
@@ -134,10 +134,9 @@ smart-recipe-generator/
    Update `.env` with your values:
    ```env
    DATABASE_URL="postgresql://username:password@host:5432/database"
-   JWT_SECRET="your-super-secret-jwt-key"
-   PORT=5000
+   JWT_SECRET="your-secret-jwt-key"
    OPENAI_API_KEY="sk-your-openai-key"
-   CORS_ORIGIN="http://localhost:5173"
+   CORS_ORIGIN="https://flavorcraft-ai.vercel.app"
    ```
 
 4. **Set up database**
@@ -161,6 +160,7 @@ smart-recipe-generator/
 2. **Set up environment variables**
    ```env
    VITE_OPENAI_API_KEY=your_openai_api_key_here
+   
    ```
 
 3. **Start development server**
@@ -197,6 +197,7 @@ smart-recipe-generator/
 - **Input Validation**: Comprehensive request validation
 - **Environment Variables**: Sensitive data stored securely
 - **SQL Injection Prevention**: Prisma ORM provides built-in protection
+- **Note**: Email validation is currently handled client-side only. Server-side email verification planned for future updates.
 
 ## 🧪 API Testing
 
@@ -204,7 +205,7 @@ The project includes comprehensive API testing setup:
 
 ```http
 ### Example: Create Recipe
-POST http://localhost:5000/api/recipes
+POST https://ai-recipe-generator-backend.onrender.com/api/recipes
 Content-Type: application/json
 Authorization: Bearer YOUR_JWT_TOKEN
 
@@ -261,12 +262,12 @@ model Recipe {
 - [x] Security middleware and validation
 - [x] Comprehensive API testing suite
 
-### 🔄 Phase 3: Integration & Deployment (In Progress)
-- [ ] Frontend-Backend integration
-- [ ] Replace mock data with real API calls
-- [ ] Backend deployment to Render
-- [ ] Production environment configuration
-- [ ] End-to-end testing
+### ✅ Phase 3: Integration & Deployment (Complete)
+- [x] Frontend-Backend integration
+- [x] Replace mock data with real API calls
+- [x] Backend deployment to Render
+- [x] Production environment configuration
+- [x] End-to-end testing
 
 ### 🔄 Phase 4: Polish & Portfolio (Planned)
 - [ ] UI/UX improvements
