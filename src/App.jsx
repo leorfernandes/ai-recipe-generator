@@ -11,6 +11,7 @@
  * - Professional portfolio presentation
  */
 
+import { AuthProvider } from './contexts/AuthContext';
 import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -84,28 +85,30 @@ Keep the recipe simple, practical, and easy to follow. Use clear measurements an
   };
 
   return (
-    <div className="min-h-screen bg-stone-50 w-full overflow-x-hidden">
-      {/* Navigation */}
-      <Navbar />
-      
-      {/* Hero section with main messaging */}
-      <Hero />
-      
-      {/* Interactive recipe generation form */}
-      <RecipeForm onGenerate={handleGenerate} loading={loading} />
-      
-      {/* Recipe display with loading states */}
-      <RecipeDisplay recipe={recipe} loading={loading} />
-      
-      {/* Project information */}
-      <About />
-      
-      {/* Contact form */}
-      <Contact />
-      
-      {/* Footer with links and disclaimer */}
-      <Footer onGenerate={handleGenerate}/>
-    </div>
+    <AuthProvider>
+      <div className="min-h-screen bg-stone-50 w-full overflow-x-hidden">
+        {/* Navigation */}
+        <Navbar />
+        
+        {/* Hero section with main messaging */}
+        <Hero />
+        
+        {/* Interactive recipe generation form */}
+        <RecipeForm onGenerate={handleGenerate} loading={loading} />
+        
+        {/* Recipe display with loading states */}
+        <RecipeDisplay recipe={recipe} loading={loading} />
+        
+        {/* Project information */}
+        <About />
+        
+        {/* Contact form */}
+        <Contact />
+        
+        {/* Footer with links and disclaimer */}
+        <Footer onGenerate={handleGenerate}/>
+      </div>
+    </AuthProvider>
   );
 }
 

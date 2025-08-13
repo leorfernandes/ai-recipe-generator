@@ -5,9 +5,36 @@
  * Responsive design: stacked on mobile, horizontal on desktop.
  */
 
+import { useState } from 'react';
+import { useAuth } from '../contexts/AuthContext';
+import AuthModal from './AuthModal';
+
 function Navbar() {
+    const [showModal, setShowModal] = useState(false);
+    const [modalMode, setModalMode] = useState('login');
+    const { isAuthenticated, user, logout } = useAuth();
+
+    const openLoginModal = () => {
+        setModalMode('login');
+        setShowModal(true);
+    };
+    
+    const openRegisterModal = () => {
+        setModalMode('register');
+        setShowModal(true);
+    }
+
+    const handleLogout = () => {
+        logout();
+    }
+
+    const closeModal = () => {
+        setShowModal(false);
+    }
+    
     return(
-        <nav className="bg-yellow-50 w-full sticky z-50 top-0 shadow-md py-4 md:py-6">
+        <>
+        <nav className="bg-yellow-50 w-full sticky z-49 top-0 shadow-md py-4 md:py-6">
             {/* Main navigation container with responsive layout */}
             <div className="flex flex-col md:flex-row justify-between md:justify-around items-center max-w-6xl mx-auto px-4 gap-4 md:gap-0">
                 
@@ -38,8 +65,37 @@ function Navbar() {
                         </svg>
                     </a>
                 </div>
+
+                <div>
+                    {isAuthenticated ? (
+                        <div className="flex items-center space-x-3">
+                            <span className="text-stone-700">Hi, {user?.name}!</span>
+                            <button onClick={handleLogout}>Logout</button>                            
+                        </div>
+                    ) : (
+                        <div className="flex space-x-6">
+                            <button onClick={openLoginModal}
+                            className="bg-transparent hover:border-transparent p-0 text-orange-600 hover:text-orange-700 transition duration-200">
+                                Sign In
+                            </button>
+                            <button onClick={openRegisterModal}
+                            className="bg-transparent hover:border-transparent p-0 text-orange-600 hover:text-orange-700 transition duration-200">
+                                Sign Up
+                            </button>
+                        </div>
+                    )}
+                </div>
             </div>
         </nav>
+        {/* Authentication Modal */}
+        {showModal && (
+            <AuthModal
+                isOpen={true}
+                initialMode={modalMode}
+                onClose={closeModal}
+            />
+        )}
+        </>
     )
 }
 
