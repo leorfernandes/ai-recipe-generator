@@ -14,14 +14,14 @@ function Hero() {
             <div className="px-4">
                 {/* Main headline - emotional hook */}
                 <AnimatedSection>
-                    <h1 className="text-orange-600 text-center font-heading max-w-4xl mx-auto pt-6 md:pt-8 text-3xl md:text-5xl leading-tight">
+                    <h1 className="text-orange-500 text-center font-heading max-w-4xl mx-auto pt-12 pb-6 md:pt-16 text-3xl md:text-5xl leading-tight">
                         Turn What You Have Into What You Crave
                     </h1>
                 </AnimatedSection>
                 
                 {/* Subheadline - explains the value proposition */}
                 <AnimatedSection delay="delay-200">
-                    <h2 className="text-orange-800 text-center font-heading max-w-2xl mx-auto pb-6 md:pb-8 text-lg md:text-3xl leading-tight">
+                    <h2 className="text-orange-800 text-center font-heading max-w-2xl mx-auto pt-6 pb-12 md:pb-16 text-lg md:text-3xl leading-tight">
                         Smart Recipe Creation, Tailored to Your Kitchen
                     </h2>
                 </AnimatedSection>
@@ -29,7 +29,7 @@ function Hero() {
             
             {/* Full-width hero image with responsive height */}
             <AnimatedSection delay="delay-400">
-                <div className="max-h-64 md:max-h-96 overflow-hidden">
+                <div className="max-h-64 md:max-h-screen overflow-hidden">
                     <img 
                         src="/img/hero-image.jpg" 
                         alt="Image of a person cooking and a cookbook" 

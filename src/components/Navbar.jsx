@@ -69,8 +69,8 @@ function Navbar() {
                 <div>
                     {isAuthenticated ? (
                         <div className="flex items-center space-x-3">
-                            <span className="text-stone-700">Hi, {user?.name}!</span>
-                            <button onClick={handleLogout}>Logout</button>                            
+                            <span className="text-orange-600">Hi, {user?.name}!</span>
+                            <button onClick={handleLogout} className="bg-transparent border-none hover:boder-none text-stone-700 p-0 hover:text-orange-600 transition duration-300">Logout</button>                            
                         </div>
                     ) : (
                         <div className="flex space-x-6">
