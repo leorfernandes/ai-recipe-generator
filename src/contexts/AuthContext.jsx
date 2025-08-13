@@ -10,7 +10,6 @@
  */
 
 import { useState, useEffect } from 'react';
-import { useAuth } from '../contexts/AuthContext';
 
 function AuthModal({ isOpen, onClose, initialMode = 'login' }) {
     // ==================== STATE MANAGEMENT ====================
